@@ -1,8 +1,8 @@
 import matter from 'gray-matter';
 import { readdir, readFile } from 'fs/promises';
 import path, { basename, extname } from 'path';
-import { HNode } from './types.ts';
-import { INodesImporter } from './nodes-importer.ts';
+import { HNode } from './types';
+import type { INodesImporter } from './nodes-importer';
 
 export class DendronNodesImporter implements INodesImporter {
   private readonly srcDir: string;

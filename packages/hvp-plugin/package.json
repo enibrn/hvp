@@ -2,22 +2,34 @@
   "name": "hvp-plugin",
   "description": "A vite plugin to extract vitepress config",
   "license": "ISC",
-  "author": "",
+  "author": "enibrn",
   "type": "module",
   "version": "1.0.0",
-  "main": "index.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "vitest run --coverage"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc"
   },
   "devDependencies": {
     "@types/node": "^24.0.8",
     "vitepress": "2.0.0-alpha.7",
-    "vitest": "^4.0.0-beta.1"
+    "vitest": "^4.0.0-beta.1",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "remove-markdown": "^0.6.2",
     "markdown-it-wikilinks": "^1.4.0",
-    "mdit-async-fm-title": "file:../mdit-async-fm-title"
+    "mdit-async-fm-title": "file:../mdit-async-fm-title",
+    "remove-markdown": "^0.6.2"
   }
 }

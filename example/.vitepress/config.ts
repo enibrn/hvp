@@ -1,4 +1,4 @@
-import { VitePluginHvpDendron, HVPConfig } from 'hvp-plugin';
+import { VitePluginHvpDendron, type HVPConfig } from 'hvp-plugin';
 
 const config: HVPConfig = {
   srcDir: 'notes',

@@ -1,7 +1,7 @@
 import matter from 'gray-matter';
 import removeMd from 'remove-markdown';
 import { readFile } from 'fs/promises';
-import { HNode, BlogConfig } from './types';
+import { HNode, type BlogConfig } from './types';
 
 export class ThemeDataProvider {
   public readonly redirects: Record<string, string> = {};

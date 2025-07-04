@@ -1,12 +1,12 @@
 import type { Plugin, UserConfig } from 'vite';
 import { defineConfig } from 'vitepress';
-import { HVPConfig } from './types';
+import type { HVPConfig } from './types';
 import { DendronNodesImporter } from './dendron-nodes-importer';
 import { ConfigBuilder } from './config-builder';
 import markdownItWikilinksFn from 'markdown-it-wikilinks';
 import mditAsyncFmTitleFn from 'mdit-async-fm-title';
 
-export { HVPConfig } from './types';
+export type { HVPConfig } from './types';
 
 // Vite plugin to inject VitePress config using DendronNodesImporter and ConfigBuilder
 export function VitePluginHvpDendron(

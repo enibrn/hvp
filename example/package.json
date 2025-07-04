@@ -1,0 +1,17 @@
+{
+  "name": "example",
+  "description": "Example project using the hvp stuff",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vitepress dev"
+  },
+  "devDependencies": {
+    "vitepress": "2.0.0-alpha.7"
+  },
+  "dependencies": {
+    "hvp-plugin": "file:../packages/hvp-plugin"
+  }
+}

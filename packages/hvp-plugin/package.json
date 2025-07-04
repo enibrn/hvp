@@ -5,8 +5,9 @@
   "author": "",
   "type": "module",
   "version": "1.0.0",
+  "main": "index.ts",
   "scripts": {
-    "test": "node index.test.js"
+    "test": "vitest run --coverage"
   },
   "devDependencies": {
     "@types/node": "^24.0.8",

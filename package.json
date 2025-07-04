@@ -4,6 +4,7 @@
   "license": "ISC",
   "author": "",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "example"
   ]
 }

@@ -69,7 +69,8 @@ export type BlogConfig = {
   maxExcerptLength: number;
 }
 
-export type ThemeConfig = {
+export type HVPConfig = {
   baseUrl: string;
+  srcDir: string
   blog: BlogConfig;
 }

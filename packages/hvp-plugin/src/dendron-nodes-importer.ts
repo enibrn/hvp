@@ -5,16 +5,16 @@ import { HNode } from './types.ts';
 import { INodesImporter } from './nodes-importer.ts';
 
 export class DendronNodesImporter implements INodesImporter {
-  private readonly nodesPath: string;
+  private readonly srcDir: string;
 
-  constructor(nodesPath: string) {
-    this.nodesPath = nodesPath;
+  constructor(srcDir: string) {
+    this.srcDir = srcDir;
   }
 
   public async do(): Promise<HNode.ImportResult[]> {
     const results: HNode.ImportResult[] = [];
     const filesToExclude: string[] = ['root.md', 'index.md', 'README.md'];
-    const files: string[] = await readdir(this.nodesPath);
+    const files: string[] = await readdir(this.srcDir);
     const markdownFiles: string[] = files
       .filter(file => extname(file) === '.md' && !filesToExclude.includes(file));
     for (const file of markdownFiles) {
@@ -26,7 +26,7 @@ export class DendronNodesImporter implements INodesImporter {
   private async importNodeFromFile(fileNameWithExt: string): Promise<HNode.ImportResult> {
     const fileName: string = basename(fileNameWithExt, extname(fileNameWithExt));
     const lastPart: string = fileName.split('.').pop() || '';
-    const filePath: string = path.join(this.nodesPath, fileNameWithExt);
+    const filePath: string = path.join(this.srcDir, fileNameWithExt);
 
     let data: any = {};
     try {

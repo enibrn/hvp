@@ -6,10 +6,7 @@
   "type": "module",
   "version": "1.0.0",
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
+    ".": "./dist/index.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -17,14 +14,14 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "npm run clean && tsc"
+    "build": "tsdown"
   },
   "devDependencies": {
     "@types/node": "^24.0.8",
+    "tsdown": "^0.12.9",
+    "typescript": "^5.8.3",
     "vitepress": "2.0.0-alpha.7",
-    "vitest": "^4.0.0-beta.1",
-    "typescript": "^5.8.3"
+    "vitest": "^4.0.0-beta.1"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

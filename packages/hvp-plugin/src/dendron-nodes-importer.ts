@@ -85,27 +85,27 @@ export class DendronNodesImporter implements INodesImporter {
   }
 
   private static resolveDoc(data: any): HNode.DocEntryInfo | false {
-    if (!data.vpd
-      || typeof data.vpd !== 'object'
-      || !data.vpd.doc
-      || (typeof data.vpd.doc !== 'object' && typeof data.vpd.doc !== 'boolean')
-      || (typeof data.vpd.doc === 'boolean' && !data.vpd.doc)) {
+    if (!data.hvp
+      || typeof data.hvp !== 'object'
+      || !data.hvp.doc
+      || (typeof data.hvp.doc !== 'object' && typeof data.hvp.doc !== 'boolean')
+      || (typeof data.hvp.doc === 'boolean' && !data.hvp.doc)) {
       return false;
     }
 
     let leafLandingPoint: 'first' | 'last' = 'first';
     let collapseNonLandingChildren = false;
 
-    if (typeof data.vpd.doc === 'boolean' && data.vpd.doc) {
+    if (typeof data.hvp.doc === 'boolean' && data.hvp.doc) {
       return { leafLandingPoint, collapseNonLandingChildren };
     }
 
-    if (data.vpd.doc.leafLandingPoint && (data.vpd.doc.leafLandingPoint === 'first' || data.vpd.doc.leafLandingPoint === 'last')) {
-      leafLandingPoint = data.vpd.doc.leafLandingPoint;
+    if (data.hvp.doc.leafLandingPoint && (data.hvp.doc.leafLandingPoint === 'first' || data.hvp.doc.leafLandingPoint === 'last')) {
+      leafLandingPoint = data.hvp.doc.leafLandingPoint;
     }
 
-    if (data.vpd.doc.collapseOtherFirstLevels && typeof data.vpd.doc.collapseOtherFirstLevels === 'boolean') {
-      collapseNonLandingChildren = data.vpd.doc.collapseOtherFirstLevels;
+    if (data.hvp.doc.collapseOtherFirstLevels && typeof data.hvp.doc.collapseOtherFirstLevels === 'boolean') {
+      collapseNonLandingChildren = data.hvp.doc.collapseOtherFirstLevels;
     }
 
     return {

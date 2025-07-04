@@ -1,0 +1,9 @@
+{
+  "name": "hvp",
+  "description": "Publishing documents with a hierarchical naming structure in vitepress",
+  "license": "ISC",
+  "author": "",
+  "workspaces": [
+    "packages/*"
+  ]
+}

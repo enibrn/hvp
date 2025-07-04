@@ -1,0 +1,15 @@
+{
+  "name": "mdit-async-fm-title",
+  "description": "A markdown-it plugin to extract frontmatter title asynchronously",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-it-async": "^2.2.0"
+  }
+}

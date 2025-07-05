@@ -1,7 +1,7 @@
 import matter from 'gray-matter';
 import removeMd from 'remove-markdown';
 import { readFile } from 'fs/promises';
-import { HNode, type BlogConfig } from './types';
+import { HNode, type HVPConfig } from './types';
 
 export class ThemeDataProvider {
   public readonly redirects: Record<string, string> = {};
@@ -9,12 +9,12 @@ export class ThemeDataProvider {
   public readonly newlyUpdatedBlogPosts: HNode.BlogPost[] = [];
 
   private readonly baseUrl: string;
-  private readonly blogConfig: BlogConfig;
+  private readonly config: HVPConfig;
   private readonly leafNodes: HNode.Leaf[] = [];
 
-  constructor(baseUrl: string, config: BlogConfig, leafNodes: HNode.Leaf[]) {
-    this.baseUrl = baseUrl;
-    this.blogConfig = config;
+  constructor(config: HVPConfig, leafNodes: HNode.Leaf[], baseUrl?: string) {
+    this.baseUrl = baseUrl || '/';
+    this.config = config;
     this.leafNodes = leafNodes;
   }
 
@@ -27,7 +27,7 @@ export class ThemeDataProvider {
   private async fetchNewlyCreatedBlogPosts() {
     const promises: Promise<HNode.BlogPost>[] = this.leafNodes
       .sort((a, b) => b.createdTimestamp - a.createdTimestamp)
-      .slice(0, this.blogConfig.lastCreatedItemsToTake)
+      .slice(0, this.config.lastCreatedItemsToTake)
       .map(async (node) => this.resolveBlogCard(node));
 
     this.newlyCreatedBlogPosts.push(...await Promise.all(promises));
@@ -37,7 +37,7 @@ export class ThemeDataProvider {
     const promises: Promise<HNode.BlogPost>[] = this.leafNodes
       .filter(x => !this.newlyCreatedBlogPosts.some(y => y.fileName === x.fileName)) //exclude newly created items
       .sort((a, b) => b.updatedTimestamp - a.updatedTimestamp)
-      .slice(0, this.blogConfig.lastUpdatedItemsToTake)
+      .slice(0, this.config.lastUpdatedItemsToTake)
       .map(async (node) => this.resolveBlogCard(node));
 
     this.newlyUpdatedBlogPosts.push(...await Promise.all(promises));
@@ -61,9 +61,9 @@ export class ThemeDataProvider {
 
   private getExcerpt(fcontent: string) {
     let contentText = removeMd(fcontent).trim().replace(/\s+/g, ' ');
-    const excerpt = contentText.slice(0, this.blogConfig.maxExcerptLength);
+    const excerpt = contentText.slice(0, this.config.maxExcerptLength);
 
-    if (contentText.length > this.blogConfig.maxExcerptLength) {
+    if (contentText.length > this.config.maxExcerptLength) {
       return excerpt + '...';
     }
 

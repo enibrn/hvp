@@ -7,8 +7,8 @@ import type { INodesImporter } from './nodes-importer';
 export class DendronNodesImporter implements INodesImporter {
   private readonly srcDir: string;
 
-  constructor(srcDir: string) {
-    this.srcDir = srcDir;
+  constructor(srcDir?: string) {
+    this.srcDir = srcDir || '/';
   }
 
   public async do(): Promise<HNode.ImportResult[]> {

@@ -1,0 +1,699 @@
+{
+  "userConfig": {
+    "root": "C:/Users/binel/workspace/current/hvp/example",
+    "base": "/",
+    "cacheDir": "C:/Users/binel/workspace/current/hvp/example/.vitepress/cache",
+    "plugins": [
+      {
+        "name": "vitepress",
+        "generateBundle": {
+          "order": "post"
+        }
+      },
+      {
+        "name": "vitepress:rewrites"
+      },
+      {
+        "name": "vite:vue",
+        "api": {
+          "options": {
+            "isProduction": false,
+            "compiler": null,
+            "customElement": {},
+            "include": {},
+            "root": "C:\\Users\\binel\\workspace\\current\\hvp\\example",
+            "sourceMap": true,
+            "cssDevSourcemap": false
+          },
+          "include": {},
+          "version": "6.0.0"
+        },
+        "resolveId": {
+          "filter": {
+            "id": [
+              {},
+              {}
+            ]
+          }
+        },
+        "load": {
+          "filter": {
+            "id": [
+              {},
+              {}
+            ]
+          }
+        },
+        "transform": {}
+      },
+      {
+        "name": "vitepress:hmr-fix"
+      },
+      {
+        "name": "vitepress:webfonts",
+        "enforce": "pre"
+      },
+      {
+        "name": "vite-plugin-hvp-dendron"
+      },
+      {
+        "name": "vitepress:local-search"
+      },
+      {
+        "name": "vitepress:data"
+      },
+      {
+        "name": "vitepress:dynamic-routes"
+      },
+      {
+        "name": "vite-plugin-hvp-dendron"
+      }
+    ],
+    "server": {
+      "_": [
+        "dev"
+      ],
+      "fs": {
+        "allow": [
+          "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client",
+          "C:/Users/binel/workspace/current/hvp/example",
+          "C:\\Users\\binel\\workspace\\current\\hvp"
+        ]
+      }
+    },
+    "customLogger": {
+      "hasWarned": false
+    },
+    "resolve": {
+      "alias": [
+        {
+          "find": "@theme",
+          "replacement": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client\\theme-default"
+        },
+        {
+          "find": "@siteData",
+          "replacement": "/@siteData"
+        },
+        {
+          "find": {},
+          "replacement": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client\\index.js"
+        },
+        {
+          "find": {},
+          "replacement": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client\\theme-default\\index.js"
+        },
+        {
+          "find": {},
+          "replacement": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vue\\dist\\vue.runtime.esm-bundler.js"
+        }
+      ],
+      "dedupe": [
+        "vue"
+      ]
+    },
+    "define": {
+      "__VP_LOCAL_SEARCH__": false,
+      "__ALGOLIA__": false,
+      "__CARBON__": false,
+      "__ASSETS_DIR__": "\"assets\"",
+      "__VUE_PROD_HYDRATION_MISMATCH_DETAILS__": false,
+      "__VUE_OPTIONS_API__": true,
+      "__VUE_PROD_DEVTOOLS__": false
+    },
+    "optimizeDeps": {
+      "include": [
+        "vue",
+        "vitepress > @vue/devtools-api",
+        "vitepress > @vueuse/core",
+        "@theme/index"
+      ],
+      "exclude": [
+        "@docsearch/js",
+        "vitepress"
+      ]
+    },
+    "vitepress": {
+      "root": "C:/Users/binel/workspace/current/hvp/example",
+      "srcDir": "C:/Users/binel/workspace/current/hvp/example",
+      "assetsDir": "assets",
+      "site": {
+        "lang": "en-US",
+        "dir": "ltr",
+        "title": "VitePress",
+        "description": "Vite & Vue powered static site generator.",
+        "base": "/",
+        "head": [
+          [
+            "script",
+            {
+              "id": "check-dark-mode"
+            },
+            ";(() => {\n               const preference = localStorage.getItem('vitepress-theme-appearance') || 'auto'\n               const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches\n               if (!preference || preference === 'auto' ? prefersDark : preference === 'dark')\n                 document.documentElement.classList.add('dark')\n             })()"
+          ],
+          [
+            "script",
+            {
+              "id": "check-mac-os"
+            },
+            "document.documentElement.classList.toggle('mac', /Mac|iPhone|iPod|iPad/i.test(navigator.platform))"
+          ]
+        ],
+        "router": {
+          "prefetchLinks": true
+        },
+        "appearance": true,
+        "themeConfig": {},
+        "locales": {},
+        "scrollOffset": 134,
+        "cleanUrls": false,
+        "additionalConfig": {}
+      },
+      "themeDir": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client\\theme-default",
+      "configPath": "C:/Users/binel/workspace/current/hvp/example/.vitepress/config.ts",
+      "configDeps": [
+        "C:/Users/binel/workspace/current/hvp/example/.vitepress/config.ts"
+      ],
+      "outDir": "C:/Users/binel/workspace/current/hvp/example/.vitepress/dist",
+      "cacheDir": "C:/Users/binel/workspace/current/hvp/example/.vitepress/cache",
+      "logger": {
+        "hasWarned": false
+      },
+      "tempDir": "C:/Users/binel/workspace/current/hvp/example/.vitepress/.temp",
+      "lastUpdated": false,
+      "vite": {
+        "plugins": [
+          {
+            "name": "vite-plugin-hvp-dendron"
+          }
+        ]
+      },
+      "mpa": false,
+      "metaChunk": false,
+      "cleanUrls": false,
+      "useWebFonts": false,
+      "userConfig": {
+        "title": "VitePress",
+        "description": "Vite & Vue powered static site generator.",
+        "vite": {
+          "plugins": [
+            {
+              "name": "vite-plugin-hvp-dendron"
+            }
+          ]
+        },
+        "additionalConfig": {}
+      },
+      "buildConcurrency": 64,
+      "pages": [
+        "notes/algorithms.md",
+        "notes/algorithms.searching.binary-search.md",
+        "notes/algorithms.searching.md",
+        "notes/algorithms.sorting.md",
+        "notes/algorithms.sorting.quicksort.md",
+        "notes/data-structures.graph.md",
+        "notes/data-structures.md",
+        "notes/data-structures.tree.md",
+        "notes/data-structures.tree.trie.md",
+        "notes/index.md",
+        "notes/paradigms.md",
+        "notes/paradigms.object-oriented.inheritance.md",
+        "notes/paradigms.object-oriented.inheritance.single.md",
+        "notes/paradigms.object-oriented.md",
+        "notes/root.md",
+        "notes/theory.computation.automata.md",
+        "notes/theory.computation.automata.turing.md",
+        "notes/theory.computation.md",
+        "notes/theory.md"
+      ],
+      "dynamicRoutes": [],
+      "rewrites": {
+        "map": {},
+        "inv": {}
+      },
+      "__dirty": true
+    },
+    "ssr": {
+      "external": []
+    }
+  },
+  "customConfig": {
+    "srcDir": "notes",
+    "base": "/my-vault/",
+    "themeConfig": {
+      "nav": [
+        {
+          "text": "Algorithms",
+          "items": [
+            {
+              "text": "Searching Algorithms",
+              "items": [
+                {
+                  "text": "Binary Search",
+                  "items": []
+                }
+              ]
+            },
+            {
+              "text": "Sorting Algorithms",
+              "link": "/algorithms.sorting.quicksort"
+            }
+          ]
+        },
+        {
+          "text": "Data Structures",
+          "items": [
+            {
+              "text": "Graph",
+              "items": []
+            },
+            {
+              "text": "Tree",
+              "link": "/data-structures.tree.trie"
+            }
+          ]
+        },
+        {
+          "text": "Programming Paradigms",
+          "items": [
+            {
+              "text": "Object-Oriented Programming",
+              "items": [
+                {
+                  "text": "Inheritance",
+                  "link": "/paradigms.object-oriented.inheritance.single"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Theory",
+          "items": [
+            {
+              "text": "Computation",
+              "items": [
+                {
+                  "text": "Automata",
+                  "link": "/theory.computation.automata.turing"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sidebar": {
+        "algorithms.sorting": [
+          {
+            "key": "algorithms.sorting.quicksort",
+            "text": "Quicksort",
+            "link": "/algorithms.sorting.quicksort"
+          }
+        ],
+        "data-structures.tree": [
+          {
+            "key": "data-structures.tree.trie",
+            "text": "Trie",
+            "link": "/data-structures.tree.trie"
+          }
+        ],
+        "paradigms.object-oriented.inheritance": [
+          {
+            "key": "paradigms.object-oriented.inheritance.single",
+            "text": "Single Inheritance",
+            "link": "/paradigms.object-oriented.inheritance.single"
+          }
+        ],
+        "theory.computation.automata": [
+          {
+            "key": "theory.computation.automata.turing",
+            "text": "Turing Machine",
+            "link": "/theory.computation.automata.turing"
+          }
+        ]
+      }
+    },
+    "markdown": {},
+    "srcExclude": [
+      "algorithms.md",
+      "algorithms.searching.md",
+      "algorithms.searching.binary-search.md",
+      "algorithms.sorting.md",
+      "data-structures.md",
+      "data-structures.graph.md",
+      "data-structures.tree.md",
+      "paradigms.md",
+      "paradigms.object-oriented.md",
+      "paradigms.object-oriented.inheritance.md",
+      "theory.md",
+      "theory.computation.md",
+      "theory.computation.automata.md"
+    ]
+  },
+  "mergedConfig": {
+    "root": "C:/Users/binel/workspace/current/hvp/example",
+    "base": "/my-vault/",
+    "cacheDir": "C:/Users/binel/workspace/current/hvp/example/.vitepress/cache",
+    "plugins": [
+      {
+        "name": "vitepress",
+        "generateBundle": {
+          "order": "post"
+        }
+      },
+      {
+        "name": "vitepress:rewrites"
+      },
+      {
+        "name": "vite:vue",
+        "api": {
+          "options": {
+            "isProduction": false,
+            "compiler": null,
+            "customElement": {},
+            "include": {},
+            "root": "C:\\Users\\binel\\workspace\\current\\hvp\\example",
+            "sourceMap": true,
+            "cssDevSourcemap": false
+          },
+          "include": {},
+          "version": "6.0.0"
+        },
+        "resolveId": {
+          "filter": {
+            "id": [
+              {},
+              {}
+            ]
+          }
+        },
+        "load": {
+          "filter": {
+            "id": [
+              {},
+              {}
+            ]
+          }
+        },
+        "transform": {}
+      },
+      {
+        "name": "vitepress:hmr-fix"
+      },
+      {
+        "name": "vitepress:webfonts",
+        "enforce": "pre"
+      },
+      {
+        "name": "vite-plugin-hvp-dendron"
+      },
+      {
+        "name": "vitepress:local-search"
+      },
+      {
+        "name": "vitepress:data"
+      },
+      {
+        "name": "vitepress:dynamic-routes"
+      },
+      {
+        "name": "vite-plugin-hvp-dendron"
+      }
+    ],
+    "server": {
+      "_": [
+        "dev"
+      ],
+      "fs": {
+        "allow": [
+          "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client",
+          "C:/Users/binel/workspace/current/hvp/example",
+          "C:\\Users\\binel\\workspace\\current\\hvp"
+        ]
+      }
+    },
+    "customLogger": {
+      "hasWarned": false
+    },
+    "resolve": {
+      "alias": [
+        {
+          "find": "@theme",
+          "replacement": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client\\theme-default"
+        },
+        {
+          "find": "@siteData",
+          "replacement": "/@siteData"
+        },
+        {
+          "find": {},
+          "replacement": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client\\index.js"
+        },
+        {
+          "find": {},
+          "replacement": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client\\theme-default\\index.js"
+        },
+        {
+          "find": {},
+          "replacement": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vue\\dist\\vue.runtime.esm-bundler.js"
+        }
+      ],
+      "dedupe": [
+        "vue"
+      ]
+    },
+    "define": {
+      "__VP_LOCAL_SEARCH__": false,
+      "__ALGOLIA__": false,
+      "__CARBON__": false,
+      "__ASSETS_DIR__": "\"assets\"",
+      "__VUE_PROD_HYDRATION_MISMATCH_DETAILS__": false,
+      "__VUE_OPTIONS_API__": true,
+      "__VUE_PROD_DEVTOOLS__": false
+    },
+    "optimizeDeps": {
+      "include": [
+        "vue",
+        "vitepress > @vue/devtools-api",
+        "vitepress > @vueuse/core",
+        "@theme/index"
+      ],
+      "exclude": [
+        "@docsearch/js",
+        "vitepress"
+      ]
+    },
+    "vitepress": {
+      "root": "C:/Users/binel/workspace/current/hvp/example",
+      "srcDir": "C:/Users/binel/workspace/current/hvp/example",
+      "assetsDir": "assets",
+      "site": {
+        "lang": "en-US",
+        "dir": "ltr",
+        "title": "VitePress",
+        "description": "Vite & Vue powered static site generator.",
+        "base": "/",
+        "head": [
+          [
+            "script",
+            {
+              "id": "check-dark-mode"
+            },
+            ";(() => {\n               const preference = localStorage.getItem('vitepress-theme-appearance') || 'auto'\n               const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches\n               if (!preference || preference === 'auto' ? prefersDark : preference === 'dark')\n                 document.documentElement.classList.add('dark')\n             })()"
+          ],
+          [
+            "script",
+            {
+              "id": "check-mac-os"
+            },
+            "document.documentElement.classList.toggle('mac', /Mac|iPhone|iPod|iPad/i.test(navigator.platform))"
+          ]
+        ],
+        "router": {
+          "prefetchLinks": true
+        },
+        "appearance": true,
+        "themeConfig": {},
+        "locales": {},
+        "scrollOffset": 134,
+        "cleanUrls": false,
+        "additionalConfig": {}
+      },
+      "themeDir": "C:\\Users\\binel\\workspace\\current\\hvp\\node_modules\\vitepress\\dist\\client\\theme-default",
+      "configPath": "C:/Users/binel/workspace/current/hvp/example/.vitepress/config.ts",
+      "configDeps": [
+        "C:/Users/binel/workspace/current/hvp/example/.vitepress/config.ts"
+      ],
+      "outDir": "C:/Users/binel/workspace/current/hvp/example/.vitepress/dist",
+      "cacheDir": "C:/Users/binel/workspace/current/hvp/example/.vitepress/cache",
+      "logger": {
+        "hasWarned": false
+      },
+      "tempDir": "C:/Users/binel/workspace/current/hvp/example/.vitepress/.temp",
+      "lastUpdated": false,
+      "vite": {
+        "plugins": [
+          {
+            "name": "vite-plugin-hvp-dendron"
+          }
+        ]
+      },
+      "mpa": false,
+      "metaChunk": false,
+      "cleanUrls": false,
+      "useWebFonts": false,
+      "userConfig": {
+        "title": "VitePress",
+        "description": "Vite & Vue powered static site generator.",
+        "vite": {
+          "plugins": [
+            {
+              "name": "vite-plugin-hvp-dendron"
+            }
+          ]
+        },
+        "additionalConfig": {}
+      },
+      "buildConcurrency": 64,
+      "pages": [
+        "notes/algorithms.md",
+        "notes/algorithms.searching.binary-search.md",
+        "notes/algorithms.searching.md",
+        "notes/algorithms.sorting.md",
+        "notes/algorithms.sorting.quicksort.md",
+        "notes/data-structures.graph.md",
+        "notes/data-structures.md",
+        "notes/data-structures.tree.md",
+        "notes/data-structures.tree.trie.md",
+        "notes/index.md",
+        "notes/paradigms.md",
+        "notes/paradigms.object-oriented.inheritance.md",
+        "notes/paradigms.object-oriented.inheritance.single.md",
+        "notes/paradigms.object-oriented.md",
+        "notes/root.md",
+        "notes/theory.computation.automata.md",
+        "notes/theory.computation.automata.turing.md",
+        "notes/theory.computation.md",
+        "notes/theory.md"
+      ],
+      "dynamicRoutes": [],
+      "rewrites": {
+        "map": {},
+        "inv": {}
+      },
+      "__dirty": true
+    },
+    "ssr": {
+      "external": []
+    },
+    "srcDir": "notes",
+    "themeConfig": {
+      "nav": [
+        {
+          "text": "Algorithms",
+          "items": [
+            {
+              "text": "Searching Algorithms",
+              "items": [
+                {
+                  "text": "Binary Search",
+                  "items": []
+                }
+              ]
+            },
+            {
+              "text": "Sorting Algorithms",
+              "link": "/algorithms.sorting.quicksort"
+            }
+          ]
+        },
+        {
+          "text": "Data Structures",
+          "items": [
+            {
+              "text": "Graph",
+              "items": []
+            },
+            {
+              "text": "Tree",
+              "link": "/data-structures.tree.trie"
+            }
+          ]
+        },
+        {
+          "text": "Programming Paradigms",
+          "items": [
+            {
+              "text": "Object-Oriented Programming",
+              "items": [
+                {
+                  "text": "Inheritance",
+                  "link": "/paradigms.object-oriented.inheritance.single"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Theory",
+          "items": [
+            {
+              "text": "Computation",
+              "items": [
+                {
+                  "text": "Automata",
+                  "link": "/theory.computation.automata.turing"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sidebar": {
+        "algorithms.sorting": [
+          {
+            "key": "algorithms.sorting.quicksort",
+            "text": "Quicksort",
+            "link": "/algorithms.sorting.quicksort"
+          }
+        ],
+        "data-structures.tree": [
+          {
+            "key": "data-structures.tree.trie",
+            "text": "Trie",
+            "link": "/data-structures.tree.trie"
+          }
+        ],
+        "paradigms.object-oriented.inheritance": [
+          {
+            "key": "paradigms.object-oriented.inheritance.single",
+            "text": "Single Inheritance",
+            "link": "/paradigms.object-oriented.inheritance.single"
+          }
+        ],
+        "theory.computation.automata": [
+          {
+            "key": "theory.computation.automata.turing",
+            "text": "Turing Machine",
+            "link": "/theory.computation.automata.turing"
+          }
+        ]
+      }
+    },
+    "markdown": {},
+    "srcExclude": [
+      "algorithms.md",
+      "algorithms.searching.md",
+      "algorithms.searching.binary-search.md",
+      "algorithms.sorting.md",
+      "data-structures.md",
+      "data-structures.graph.md",
+      "data-structures.tree.md",
+      "paradigms.md",
+      "paradigms.object-oriented.md",
+      "paradigms.object-oriented.inheritance.md",
+      "theory.md",
+      "theory.computation.md",
+      "theory.computation.automata.md"
+    ]
+  }
+}

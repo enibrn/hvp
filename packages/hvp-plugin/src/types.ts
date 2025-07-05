@@ -63,14 +63,8 @@ export namespace HNode {
   }
 }
 
-export type BlogConfig = {
+export type HVPConfig = {
   lastCreatedItemsToTake: number;
   lastUpdatedItemsToTake: number;
   maxExcerptLength: number;
-}
-
-export type HVPConfig = {
-  baseUrl: string;
-  srcDir: string
-  blog: BlogConfig;
 }

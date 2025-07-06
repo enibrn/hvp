@@ -3,6 +3,7 @@ import { defineConfig, type SiteConfig } from 'vitepress';
 import type { HVPConfig } from './types';
 import { DendronNodesImporter } from './dendron-nodes-importer';
 import { ConfigBuilder } from './config-builder';
+import { ThemeDataProvider } from './theme-data-provider';
 import markdownItWikilinksFn from 'markdown-it-wikilinks';
 import mditAsyncFmTitleFn from 'mdit-async-fm-title';
 
@@ -29,10 +30,13 @@ export function VitePluginHvp(
       const srcDir: string = myUserConfig.vitepress.srcDir;
       const baseUrl: string = myUserConfig.base;
 
-      // calculate stuff
+      // Calculation part
+      //only dendron nodes importer is supported for now
       const dendronNodeImporter = new DendronNodesImporter(srcDir);
       configBuilder = new ConfigBuilder(dendronNodeImporter);
       await configBuilder.resolveConfig();
+      const themeDataProvider = new ThemeDataProvider(
+        options, configBuilder.leafNodes, baseUrl);
 
       // mutate the options with the configBuilder
       let { themeConfig } = myUserConfig.vitepress.site;
